@@ -1,17 +1,15 @@
-import React, { useState } from "react";
-import "./App.css";
+import styled from "styled-components";
 import Recipe from "./components/Recipe";
 import { recipes } from "./components/pizzaList";
-import Header from "./components/Header";
 import Ingredients from "./components/Ingredients";
+import Navbar from "./components/Navbar";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <section className="firstLook">
-        <Header />
-        <Ingredients />
-      </section>
+    <Container>
+      <Navbar />
+
+      {/*  <Ingredients />
 
       {recipes.map((recipe) => (
         <Recipe
@@ -19,9 +17,13 @@ function App() {
           title={recipe.title}
           ingredients={recipe.ingredients}
         />
-      ))}
-    </div>
+      ))} */}
+    </Container>
   );
-}
+};
+
+const Container = styled.div`
+  background: grey;
+`;
 
 export default App;
