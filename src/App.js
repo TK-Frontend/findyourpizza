@@ -1,29 +1,21 @@
-import styled from "styled-components";
-import Recipe from "./components/Recipe";
-import { recipes } from "./components/pizzaList";
-import Ingredients from "./components/Ingredients";
-import Navbar from "./components/Navbar";
+import styled from 'styled-components';
+import Recipe from './components/Recipe';
+import { recipes } from './components/pizzaList';
+import Ingredients from './components/Ingredients';
+import Navbar from './components/Navbar';
+import Pizzas from './components/Pizzas';
 
 const App = () => {
   return (
-    <Container>
+    <Wrapper>
       <Navbar />
-
-      {/*  <Ingredients />
-
-      {recipes.map((recipe) => (
-        <Recipe
-          id={recipe.pizza_id}
-          title={recipe.title}
-          ingredients={recipe.ingredients}
-        />
-      ))} */}
-    </Container>
+      <Pizzas />
+    </Wrapper>
   );
 };
 
-const Container = styled.div`
-  background: grey;
+const Wrapper = styled.div`
+  width: 100%;
 `;
 
 export default App;
