@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import Recipe from './components/Recipe';
 import { recipes } from './components/pizzaList';
-import Ingredients from './components/Ingredients';
 import Navbar from './components/Navbar';
+
 import Pizzas from './components/Pizzas';
 
 const App = () => {
