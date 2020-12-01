@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const Ingredients = () => {
   return (
@@ -21,11 +21,14 @@ const Ingredients = () => {
 };
 
 const Ings = styled.div`
+  position: relative;
+  top: 20%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   color: white;
-  border: 5px solid green;
+  border: 5px solid blue;
+  padding-bottom: 50px;
 `;
 
 const Souce = styled.div`
