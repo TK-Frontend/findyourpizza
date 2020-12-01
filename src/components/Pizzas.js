@@ -1,10 +1,10 @@
-import React from 'react';
-import styled from 'styled-components';
-import pattern from '../images/pattern.png';
+import React from "react";
+import styled from "styled-components";
+import pattern from "../images/pattern.png";
 
 const Pizzas = () => {
   return (
-    <AllPizza>
+    <AllPizzas>
       {/*  <Ingredients />
       {recipes.map((recipe) => (
         <Recipe
@@ -13,11 +13,11 @@ const Pizzas = () => {
           ingredients={recipe.ingredients}
         />
       ))} */}
-    </AllPizza>
+    </AllPizzas>
   );
 };
 
-const AllPizza = styled.div`
+const AllPizzas = styled.div`
   background-image: url(${pattern});
   background-repeat: no-repeat;
   background-size: 100%;
