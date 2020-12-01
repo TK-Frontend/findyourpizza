@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import logo from '../images/logo.png';
-import backgroundPhoto from '../images/backgroundPizza.png';
-import Ingredients from './Ingredients';
+import React from "react";
+import styled from "styled-components";
+import logo from "../images/logo.png";
+import backgroundPhoto from "../images/backgroundPizza.png";
+import Ingredients from "./Ingredients";
 
 const Navbar = () => {
   return (
@@ -13,16 +13,19 @@ const Navbar = () => {
             <h2>Find Your</h2>
             <h1>Pizza</h1>
           </LogoText>
-          <img src={logo} alt='logo' />
+          <img src={logo} alt="logo" />
         </Logo>
+
         <Hamburger>
           <span />
           <span />
           <span />
         </Hamburger>
+
         <Menu>
-          <MenuLink href=''>Menu</MenuLink>
-          <MenuLink href=''>Contact</MenuLink>
+          <MenuLink href="">Home</MenuLink>
+          <MenuLink href="">Menu</MenuLink>
+          <MenuLink href="">About</MenuLink>
         </Menu>
       </Nav>
       <Ingredients />
@@ -36,7 +39,8 @@ const Container = styled.div`
   background-image: url(${backgroundPhoto});
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 464px;
+  height: 50vh;
+  width: 100vw;
 `;
 
 const Nav = styled.div`
@@ -48,51 +52,71 @@ const Logo = styled.a`
   display: flex;
   flex-direction: row;
   align-content: center;
-  height: 200px;
-  padding-left: 20px;
-  padding-top: 40px;
+  justify-content: center;
+
+  position: relative;
+  left: 5%;
+  top: 15%;
+
   border: 5px solid yellow;
 
   img {
     height: 100px;
     width: 77px;
-    margin-top: 40px;
-    margin-left: 0px;
   }
 `;
 
 const LogoText = styled.div`
   text-align: right;
   color: white;
-  padding-top: 50px;
-  margin: 0;
 
   h1 {
-    font-size: 36px;
+    font-size: 2rem;
     text-transform: uppercase;
-    font-family: 'Archistico';
+    font-family: "Archistico";
   }
 
   h2 {
-    font-size: 16px;
+    font-size: 1rem;
+    padding-top: 1.2rem;
   }
 `;
 
 const Hamburger = styled.div``;
 
 const Menu = styled.div`
-  height: 40px;
-  padding-top: 100px;
-  margin-right: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+  right: 5%;
+  top: 15%;
+
   padding-left: 50px;
   border-bottom: 2px dashed white;
+  border: 5px solid black;
+
+  @media (max-width: 768px) {
+    overflow: hidden;
+    flex-direction: column;
+    height: 100px;
+    width: 100vw;
+  }
 `;
 
 const MenuLink = styled.a`
-  font-size: 28px;
+  font-size: 1.6rem;
   text-decoration: none;
   color: white;
-  padding-left: 50px;
+  margin-left: 3rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: darkgrey;
+  }
 `;
 
 export default Navbar;
