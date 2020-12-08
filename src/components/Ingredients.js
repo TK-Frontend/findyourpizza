@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import backgroundPhoto from "../images/backgroundPizza.png";
 
 const Ingredients = () => {
   return (
@@ -21,14 +22,22 @@ const Ingredients = () => {
 };
 
 const Ings = styled.div`
-  position: relative;
-  top: 20%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  position: absolute;
+  width: 100vw;
+  padding: 1rem;
+
+  background-image: url(${backgroundPhoto});
+  background-repeat: no-repeat;
+  background-size: 100%;
+
   color: white;
-  border: 5px solid blue;
   padding-bottom: 50px;
+  h1 {
+    font-size: 1rem;
+  }
 `;
 
 const Souce = styled.div`
