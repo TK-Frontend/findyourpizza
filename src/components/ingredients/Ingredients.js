@@ -1,9 +1,9 @@
-import styled from "styled-components";
-import backgroundPhoto from "../../images/backgroundPizza.png";
-import Sauce from "./Sauce";
-import Cheese from "./Cheese";
-import Meet from "./Meet";
-import Other from "./Other";
+import styled from 'styled-components';
+import backgroundPhoto from '../../images/backgroundPizza.png';
+import Sauce from './Sauce';
+import Cheese from './Cheese';
+import Meet from './Meet';
+import Other from './Other';
 
 const Ingredients = () => {
   return (
