@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import logo from "../images/logo.png";
-import backgroundPhoto from "../images/blackboard-texture.jpg";
+import React from 'react';
+import styled from 'styled-components';
+import logo from '../images/logo.png';
+import backgroundPhoto from '../images/blackboard-texture.jpg';
 
 const Navbar = () => {
   return (
@@ -12,7 +12,7 @@ const Navbar = () => {
           <h1>Pizza</h1>
         </LogoText>
         <LogoImg>
-          <img src={logo} alt="logo" />
+          <img src={logo} alt='logo' />
         </LogoImg>
       </Logo>
 
@@ -22,9 +22,9 @@ const Navbar = () => {
         <span />
       </Hamburger>
       <Menu>
-        <MenuLink href="">Home</MenuLink>
-        <MenuLink href="">Menu</MenuLink>
-        <MenuLink href="">About</MenuLink>
+        <MenuLink href=''>Home</MenuLink>
+        <MenuLink href=''>Menu</MenuLink>
+        <MenuLink href=''>About</MenuLink>
       </Menu>
     </Nav>
   );
@@ -58,7 +58,7 @@ const LogoText = styled.div`
   h1 {
     font-size: 2rem;
     text-transform: uppercase;
-    font-family: "Archistico";
+    font-family: 'Archistico';
   }
 
   h2 {
@@ -126,7 +126,7 @@ const Menu = styled.div`
 `;
 
 const MenuLink = styled.a`
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-decoration: none;
   margin-left: 3rem;
   color: white;
