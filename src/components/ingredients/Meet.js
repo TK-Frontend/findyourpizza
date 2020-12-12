@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Meet = () => {
   return (
@@ -10,7 +10,8 @@ const Meet = () => {
 
 const Meets = styled.div`
   h1 {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
+    font-weight: 300;
   }
 `;
 
