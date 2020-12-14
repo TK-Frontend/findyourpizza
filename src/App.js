@@ -1,22 +1,23 @@
-import styled from "styled-components";
-import Recipe from "./components/Recipe";
-import { recipes } from "./components/pizzaList";
-import Navbar from "./components/Navbar";
-import Ingredients from "./components/ingredients/Ingredients";
+import styled from 'styled-components';
+import Recipe from './components/Recipe';
+import { recipes } from './components/pizzaList';
+import Navbar from './components/Navbar';
+import IngredientsMenu from './components/ingredients/IngredientsMenu';
 
-import Pizzas from "./components/Pizzas";
+import Pizzas from './components/Pizzas';
 
 const App = () => {
   return (
     <Container>
       <Navbar />
-      <Ingredients />
+      <IngredientsMenu />
       <Pizzas />
     </Container>
   );
 };
 
 const Container = styled.div`
+  position: relative;
   width: 100vw;
   height: 100vh;
 `;

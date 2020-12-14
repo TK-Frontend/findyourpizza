@@ -1,32 +1,23 @@
 import styled from 'styled-components';
+import ButtonsOfIngredients from './ButtonsOfIngredients';
 
 const Sauce = () => {
-  const sauceIngredients = ['tomato', 'white', 'BBQ'];
-  const buttons = sauceIngredients.map((ing) => {
-    return <button>{ing}</button>;
-  });
+  const ingredients = ['tomato', 'white', 'BBQ'];
 
   return (
     <Sauces>
       <h1>Sauce</h1>
-      {buttons}
+      <ButtonsOfIngredients ingredients={ingredients} />
     </Sauces>
   );
 };
 
 const Sauces = styled.div`
+  padding: 1rem;
   h1 {
     font-size: 1.2rem;
-    text-align: center;
     font-weight: 300;
-  }
-  button {
-    min-width: 100px;
-    min-height: 30px;
-    border-radius: 5px;
-    border: none;
-    margin: 3px;
-    list-style: none;
+    text-align: center;
   }
 `;
 

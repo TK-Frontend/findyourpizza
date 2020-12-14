@@ -5,7 +5,7 @@ import Cheese from './Cheese';
 import Meet from './Meet';
 import Other from './Other';
 
-const Ingredients = () => {
+const IngredientsMenu = () => {
   return (
     <Ings>
       <Sauce />
@@ -17,19 +17,17 @@ const Ingredients = () => {
 };
 
 const Ings = styled.div`
+  position: relative;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  position: absolute;
+  justify-content: center;
   width: 100vw;
-  padding: 1rem;
+  flex-basis: 10%;
 
   background-image: url(${backgroundPhoto});
   background-repeat: no-repeat;
   background-size: 100%;
 
   color: white;
-  padding-bottom: 50px;
 `;
 
-export default Ingredients;
+export default IngredientsMenu;
