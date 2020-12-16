@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'KgTenThousandReasons';
-  src: url('./Fonts/KgTenThousandReasons-R1ll.ttf') format('truetype');
+  font-family: "KgTenThousandReasons";
+  src: url("./Fonts/KgTenThousandReasons-R1ll.ttf") format("truetype");
 }
 
 * {
@@ -8,13 +8,13 @@
   padding: 0;
   overflow: hidden;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'KgTenThousandReasons',
+  font-family: -apple-system, BlinkMacSystemFont, "KgTenThousandReasons",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
