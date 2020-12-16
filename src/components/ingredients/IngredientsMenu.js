@@ -19,14 +19,19 @@ const IngredientsMenu = () => {
 const Ings = styled.div`
   position: relative;
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
   width: 100vw;
-
   background-image: url(${backgroundPhoto});
   background-repeat: no-repeat;
   background-size: 100%;
 
   color: white;
+
+  @media (max-width: 768px) {
+    background-repeat: repeat-y;
+  }
 `;
 
 export default IngredientsMenu;
