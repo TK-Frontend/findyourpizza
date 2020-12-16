@@ -1,9 +1,10 @@
-import React from 'react';
-import styled from 'styled-components';
-import logo from '../images/logo.png';
-import backgroundPhoto from '../images/blackboard-texture.jpg';
+import React, { useState } from "react";
+import styled from "styled-components";
+import logo from "../images/logo.png";
+import backgroundPhoto from "../images/blackboard-texture.jpg";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <Nav>
       <Logo>
@@ -12,19 +13,19 @@ const Navbar = () => {
           <h1>Pizza</h1>
         </LogoText>
         <LogoImg>
-          <img src={logo} alt='logo' />
+          <img src={logo} alt="logo" />
         </LogoImg>
       </Logo>
 
-      <Hamburger>
+      <Hamburger onClick={() => setIsOpen(!isOpen)}>
         <span />
         <span />
         <span />
       </Hamburger>
-      <Menu>
-        <MenuLink href=''>Home</MenuLink>
-        <MenuLink href=''>Menu</MenuLink>
-        <MenuLink href=''>About</MenuLink>
+      <Menu isOpen={isOpen}>
+        <MenuLink href="">Home</MenuLink>
+        <MenuLink href="">Menu</MenuLink>
+        <MenuLink href="">About</MenuLink>
       </Menu>
     </Nav>
   );
@@ -58,7 +59,7 @@ const LogoText = styled.div`
   h1 {
     font-size: 2rem;
     text-transform: uppercase;
-    font-family: 'Archistico';
+    font-family: "Archistico";
   }
 
   h2 {
@@ -94,6 +95,9 @@ const Hamburger = styled.div`
     flex-direction: column;
     display: flex;
     overflow: hidden;
+    position: relative;
+    top: 25%;
+    right: 10%;
   }
 `;
 
@@ -116,6 +120,7 @@ const Menu = styled.div`
     justify-content: center;
     align-items: center;
     right: 0%;
+    max-height: ${({ isOpen }) => (isOpen ? "300px" : "0")};
 
     width: 100vw;
     overflow: hidden;
