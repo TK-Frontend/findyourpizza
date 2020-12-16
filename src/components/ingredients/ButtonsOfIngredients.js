@@ -1,29 +1,15 @@
-import styled from 'styled-components';
-import React, { useState } from 'react';
+import styled from "styled-components";
 
-const ButtonsOfIngredients = ({ ingredients }) => {
-  const [btnBgColor, setBtnBgColor] = useState('yellow');
-  /* ButtonsOfIngredients.defaultProps = { btnBgColor: 'yellow' }; */
-  const buttons = ingredients.map((ingredient) => {
-    return <button>{ingredient}</button>;
-  });
-
-  return <Container>{buttons}</Container>;
-};
-
-const Container = styled.div`
+const ButtonsOfIngredients = styled.button`
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-
-  button {
-    min-width: 9rem;
-    min-height: 30px;
-    border-radius: 5px;
-    border: none;
-    margin: 3px;
-    list-style: none;
-  }
+  align-items: center;
+  min-width: 9rem;
+  min-height: 30px;
+  border-radius: 5px;
+  border: none;
+  margin: 3px;
+  list-style: none;
 `;
 
 export default ButtonsOfIngredients;
