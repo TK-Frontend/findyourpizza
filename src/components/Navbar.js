@@ -127,6 +127,7 @@ const Menu = styled.div`
     border-bottom: none;
     padding-left: 0;
     padding-bottom: 0;
+    transition: max-height 0.3s ease-in;
   }
 `;
 
