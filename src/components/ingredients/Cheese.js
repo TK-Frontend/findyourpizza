@@ -22,7 +22,11 @@ const Cheese = () => {
 };
 
 const Cheeses = styled.div`
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 25%;
+  align-items: center;
+  padding-top: 1rem;
   h1 {
     font-size: 1.2rem;
     font-weight: 300;
@@ -31,6 +35,9 @@ const Cheeses = styled.div`
   img {
     width: 20px;
     height: 20px;
+  }
+  @media (max-width: 768px) {
+    flex-basis: auto;
   }
 `;
 

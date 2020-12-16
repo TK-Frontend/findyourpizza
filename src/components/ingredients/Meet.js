@@ -19,17 +19,28 @@ const Meet = () => {
       <h1>
         Meet <img src={meet} alt="meet" />
       </h1>
-      {ingredients.map((ingredient) => {
-        return (
-          <ButtonsOfIngredients key={uuid()}>{ingredient}</ButtonsOfIngredients>
-        );
-      })}
+      <MeetButtons>
+        {ingredients.map((ingredient) => {
+          return (
+            <ButtonsOfIngredients key={uuid()}>
+              {ingredient}
+            </ButtonsOfIngredients>
+          );
+        })}
+      </MeetButtons>
     </Meets>
   );
 };
 
 const Meets = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-basis: 40%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   padding: 1rem;
+
   h1 {
     font-size: 1.2rem;
     font-weight: 300;
@@ -39,6 +50,15 @@ const Meets = styled.div`
     width: 20px;
     height: 20px;
   }
+  @media (max-width: 768px) {
+    flex-basis: auto;
+  }
+`;
+
+const MeetButtons = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 export default Meet;

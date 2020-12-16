@@ -23,16 +23,27 @@ const Other = () => {
       <h1>
         Other <img src={other} alt="other" />
       </h1>
-      {ingredients.map((ingredient) => {
-        return (
-          <ButtonsOfIngredients key={uuid()}>{ingredient}</ButtonsOfIngredients>
-        );
-      })}
+      <OthersButtons>
+        {ingredients.map((ingredient) => {
+          return (
+            <ButtonsOfIngredients key={uuid()}>
+              {ingredient}
+            </ButtonsOfIngredients>
+          );
+        })}
+      </OthersButtons>
     </Others>
   );
 };
 
 const Others = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-basis: 90%;
+  align-items: center;
+
   button {
     display: flex;
     flex-direction: column;
@@ -48,6 +59,15 @@ const Others = styled.div`
       height: 20px;
     }
   }
+  @media (max-width: 768px) {
+    flex-basis: auto;
+  }
+`;
+
+const OthersButtons = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 export default Other;
