@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import uuid from "react-uuid";
+import meet from "../../images/meet.png";
+
 import ButtonsOfIngredients from "./ButtonsOfIngredients";
 
 const Meet = () => {
@@ -14,7 +16,9 @@ const Meet = () => {
   ];
   return (
     <Meets>
-      <h1>Meet</h1>
+      <h1>
+        Meet <img src={meet} alt="meet" />
+      </h1>
       {ingredients.map((ingredient) => {
         return (
           <ButtonsOfIngredients key={uuid()}>{ingredient}</ButtonsOfIngredients>
@@ -30,6 +34,10 @@ const Meets = styled.div`
     font-size: 1.2rem;
     font-weight: 300;
     text-align: center;
+  }
+  img {
+    width: 20px;
+    height: 20px;
   }
 `;
 

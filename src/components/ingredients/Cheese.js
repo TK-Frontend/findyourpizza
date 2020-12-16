@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import uuid from "react-uuid";
+import cheese from "../../images/cheese.png";
 import ButtonsOfIngredients from "./ButtonsOfIngredients";
 
 const Cheese = () => {
@@ -7,7 +8,9 @@ const Cheese = () => {
 
   return (
     <Cheeses>
-      <h1>Cheese</h1>
+      <h1>
+        Cheese <img src={cheese} alt="cheese" />
+      </h1>
 
       {ingredients.map((ingredient) => {
         return (
@@ -24,6 +27,10 @@ const Cheeses = styled.div`
     font-size: 1.2rem;
     font-weight: 300;
     text-align: center;
+  }
+  img {
+    width: 20px;
+    height: 20px;
   }
 `;
 

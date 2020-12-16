@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import other from "../../images/other.png";
 import uuid from "react-uuid";
 import ButtonsOfIngredients from "./ButtonsOfIngredients";
 
@@ -19,7 +20,9 @@ const Other = () => {
   ];
   return (
     <Others>
-      <h1>Other</h1>
+      <h1>
+        Other <img src={other} alt="other" />
+      </h1>
       {ingredients.map((ingredient) => {
         return (
           <ButtonsOfIngredients key={uuid()}>{ingredient}</ButtonsOfIngredients>
@@ -40,6 +43,10 @@ const Others = styled.div`
     font-size: 1.2rem;
     font-weight: 300;
     text-align: center;
+    img {
+      width: 20px;
+      height: 20px;
+    }
   }
 `;
 
