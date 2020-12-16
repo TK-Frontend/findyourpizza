@@ -1,20 +1,25 @@
-import styled from 'styled-components';
-import ButtonsOfIngredients from './ButtonsOfIngredients';
+import styled from "styled-components";
+import uuid from "react-uuid";
+import ButtonsOfIngredients from "./ButtonsOfIngredients";
 
 const Meet = () => {
   const ingredients = [
-    'ham',
-    'beef',
-    'matured ham',
-    'pepperoni',
-    'pork',
-    'chicken',
-    'bacon',
+    "ham",
+    "beef",
+    "matured ham",
+    "pepperoni",
+    "pork",
+    "chicken",
+    "bacon",
   ];
   return (
     <Meets>
       <h1>Meet</h1>
-      <ButtonsOfIngredients ingredients={ingredients} />
+      {ingredients.map((ingredient) => {
+        return (
+          <ButtonsOfIngredients key={uuid()}>{ingredient}</ButtonsOfIngredients>
+        );
+      })}
     </Meets>
   );
 };
