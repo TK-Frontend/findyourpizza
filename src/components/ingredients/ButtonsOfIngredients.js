@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const ButtonsOfIngredients = styled.button`
   display: flex;
@@ -8,6 +8,7 @@ const ButtonsOfIngredients = styled.button`
   height: 30px;
   border-radius: 5px;
   border: none;
+  outline: none;
   margin: 3px;
   list-style: none;
 `;
