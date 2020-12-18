@@ -1,19 +1,29 @@
-import styled from "styled-components";
-import uuid from "react-uuid";
-import sauce from "../../images/sauce.png";
-import ButtonsOfIngredients from "./ButtonsOfIngredients";
+import { useState } from 'react';
+import styled from 'styled-components';
+import uuid from 'react-uuid';
+import sauce from '../../images/sauce.png';
+import ButtonsOfIngredients from './ButtonsOfIngredients';
 
 const Sauce = () => {
-  const ingredients = ["tomato", "white", "BBQ"];
+  const ingredients = ['tomato', 'white', 'BBQ'];
+  const [color, setColor] = useState('');
+
+  Sauce.defaultProps = { color: 'green', ordered: false };
+
+  function changeColor() {
+    console.log('test');
+  }
 
   return (
     <Sauces>
       <h1>
-        Sauce <img src={sauce} alt="sauce" />
+        Sauce <img src={sauce} alt='sauce' />
       </h1>
       {ingredients.map((ingredient) => {
         return (
-          <ButtonsOfIngredients key={uuid()}>{ingredient}</ButtonsOfIngredients>
+          <ButtonsOfIngredients key={uuid()} onClick={changeColor}>
+            {ingredient}
+          </ButtonsOfIngredients>
         );
       })}
     </Sauces>
@@ -23,7 +33,7 @@ const Sauce = () => {
 const Sauces = styled.div`
   padding-top: 1rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-basis: 25%;
   align-items: center;
   h1 {

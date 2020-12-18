@@ -1,15 +1,15 @@
-import styled from "styled-components";
-import uuid from "react-uuid";
-import cheese from "../../images/cheese.png";
-import ButtonsOfIngredients from "./ButtonsOfIngredients";
+import styled from 'styled-components';
+import uuid from 'react-uuid';
+import cheese from '../../images/cheese.png';
+import ButtonsOfIngredients from './ButtonsOfIngredients';
 
 const Cheese = () => {
-  const ingredients = ["mozarella", "corregio"];
+  const ingredients = ['mozarella', 'corregio'];
 
   return (
     <Cheeses>
       <h1>
-        Cheese <img src={cheese} alt="cheese" />
+        Cheese <img src={cheese} alt='cheese' />
       </h1>
 
       {ingredients.map((ingredient) => {
@@ -23,7 +23,7 @@ const Cheese = () => {
 
 const Cheeses = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-basis: 25%;
   align-items: center;
   padding-top: 1rem;

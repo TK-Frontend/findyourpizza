@@ -1,27 +1,27 @@
-import styled from "styled-components";
-import other from "../../images/other.png";
-import uuid from "react-uuid";
-import ButtonsOfIngredients from "./ButtonsOfIngredients";
+import styled from 'styled-components';
+import other from '../../images/other.png';
+import uuid from 'react-uuid';
+import ButtonsOfIngredients from './ButtonsOfIngredients';
 
 const Other = () => {
   const ingredients = [
-    "pineapple",
-    "corn",
-    "green pepper",
-    "rocket",
-    "mushrooms",
-    "red onion",
-    "black olives",
-    "pepper mix",
-    "cherry tomatoes",
-    "jalapenos",
-    "tomatoes",
-    "spinach leaves",
+    'pineapple',
+    'corn',
+    'green pepper',
+    'rocket',
+    'mushrooms',
+    'red onion',
+    'black olives',
+    'pepper mix',
+    'cherry tomatoes',
+    'jalapenos',
+    'tomatoes',
+    'spinach leaves',
   ];
   return (
     <Others>
       <h1>
-        Other <img src={other} alt="other" />
+        Other <img src={other} alt='other' />
       </h1>
       <OthersButtons>
         {ingredients.map((ingredient) => {
