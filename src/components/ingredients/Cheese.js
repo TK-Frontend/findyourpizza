@@ -1,29 +1,32 @@
-import styled from 'styled-components';
-import uuid from 'react-uuid';
-import cheese from '../../images/cheese.png';
-import ButtonsOfIngredients from './ButtonsOfIngredients';
+import styled from "styled-components";
+import uuid from "react-uuid";
+import cheese from "../../images/cheese.png";
+import ButtonsOfIngredients from "./ButtonsOfIngredients";
 
 const Cheese = () => {
-  const ingredients = ['mozarella', 'corregio'];
+  const ingredients = ["mozarella", "corregio"];
 
   return (
     <Cheeses>
       <h1>
-        Cheese <img src={cheese} alt='cheese' />
+        Cheese <img src={cheese} alt="cheese" />
       </h1>
-
-      {ingredients.map((ingredient) => {
-        return (
-          <ButtonsOfIngredients key={uuid()}>{ingredient}</ButtonsOfIngredients>
-        );
-      })}
+      <CheeseButtons>
+        {ingredients.map((ingredient) => {
+          return (
+            <ButtonsOfIngredients key={uuid()}>
+              {ingredient}
+            </ButtonsOfIngredients>
+          );
+        })}
+      </CheeseButtons>
     </Cheeses>
   );
 };
 
 const Cheeses = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-basis: 25%;
   align-items: center;
   padding-top: 1rem;
@@ -39,6 +42,12 @@ const Cheeses = styled.div`
   @media (max-width: 768px) {
     flex-basis: auto;
   }
+`;
+
+const CheeseButtons = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 export default Cheese;

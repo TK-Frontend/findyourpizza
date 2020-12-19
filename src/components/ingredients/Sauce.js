@@ -1,31 +1,45 @@
-import { useState } from 'react';
-import styled from 'styled-components';
-import uuid from 'react-uuid';
-import sauce from '../../images/sauce.png';
-import ButtonsOfIngredients from './ButtonsOfIngredients';
+import { useState } from "react";
+import styled from "styled-components";
+import uuid from "react-uuid";
+import sauce from "../../images/sauce.png";
+import ButtonsOfIngredients from "./ButtonsOfIngredients";
 
 const Sauce = () => {
-  const ingredients = ['tomato', 'white', 'BBQ'];
-  const [color, setColor] = useState('');
+  const ingredients = ["tomato", "white", "BBQ"];
+  const [color, setColor] = useState("white");
+  const [active, setActive] = useState(false);
+  const [activeId, setActiveId] = useState();
 
-  Sauce.defaultProps = { color: 'green', ordered: false };
+  /*  Sauce.defaultProps = { color: "green", ordered: false }; */
 
   function changeColor() {
-    console.log('test');
+    setColor("white" ? "grey" : "white");
+  }
+
+  function toggleActive() {
+    setActive(!active);
   }
 
   return (
     <Sauces>
       <h1>
-        Sauce <img src={sauce} alt='sauce' />
+        Sauce <img src={sauce} alt="sauce" />
       </h1>
-      {ingredients.map((ingredient) => {
-        return (
-          <ButtonsOfIngredients key={uuid()} onClick={changeColor}>
-            {ingredient}
-          </ButtonsOfIngredients>
-        );
-      })}
+      <SauceButtons>
+        {ingredients.map((ingredient) => {
+          return (
+            <ButtonsOfIngredients
+              color={color}
+              active={active}
+              activeId={ingredient.id === activeId}
+              key={uuid()}
+              onClick={toggleActive}
+            >
+              {ingredient}
+            </ButtonsOfIngredients>
+          );
+        })}
+      </SauceButtons>
     </Sauces>
   );
 };
@@ -33,7 +47,7 @@ const Sauce = () => {
 const Sauces = styled.div`
   padding-top: 1rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-basis: 25%;
   align-items: center;
   h1 {
@@ -49,6 +63,12 @@ const Sauces = styled.div`
   @media (max-width: 768px) {
     flex-basis: auto;
   }
+`;
+
+const SauceButtons = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 export default Sauce;
