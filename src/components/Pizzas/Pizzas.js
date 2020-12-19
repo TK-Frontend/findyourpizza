@@ -1,10 +1,13 @@
-import React from "react";
-import styled from "styled-components";
-import pattern from "../images/pattern.png";
+import React from 'react';
+import styled from 'styled-components';
+import pattern from '../../images/pattern.png';
+import PizzaCard from '../Pizzas/PizzaCard';
 
 const Pizzas = () => {
   return (
     <AllPizzas>
+      {/*  <PizzaCard /> */}
+
       {/*  <Ingredients />
       {recipes.map((recipe) => (
         <Recipe
