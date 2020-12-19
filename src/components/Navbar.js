@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import logo from "../images/logo.png";
-import backgroundPhoto from "../images/blackboard-texture.jpg";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import logo from '../images/logo.png';
+import backgroundPhoto from '../images/blackboard-texture.jpg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +13,7 @@ const Navbar = () => {
           <h1>Pizza</h1>
         </LogoText>
         <LogoImg>
-          <img src={logo} alt="logo" />
+          <img src={logo} alt='logo' />
         </LogoImg>
       </Logo>
 
@@ -23,9 +23,9 @@ const Navbar = () => {
         <span />
       </Hamburger>
       <Menu isOpen={isOpen}>
-        <MenuLink href="">Home</MenuLink>
-        <MenuLink href="">Menu</MenuLink>
-        <MenuLink href="">About</MenuLink>
+        <MenuLink href=''>Home</MenuLink>
+        <MenuLink href=''>Menu</MenuLink>
+        <MenuLink href=''>About</MenuLink>
       </Menu>
     </Nav>
   );
@@ -38,7 +38,7 @@ const Nav = styled.div`
   flex-wrap: wrap;
 
   background-image: url(${backgroundPhoto});
-  background-repeat: nfo-repeat;
+  background-repeat: no-repeat;
   background-size: 100%;
 
   position: relative;
@@ -59,7 +59,7 @@ const LogoText = styled.div`
   h1 {
     font-size: 2rem;
     text-transform: uppercase;
-    font-family: "Archistico";
+    font-family: 'Archistico';
   }
 
   h2 {
@@ -120,7 +120,7 @@ const Menu = styled.div`
     justify-content: center;
     align-items: center;
     right: 0%;
-    max-height: ${({ isOpen }) => (isOpen ? "300px" : "0")};
+    max-height: ${({ isOpen }) => (isOpen ? '300px' : '0')};
 
     width: 100vw;
     overflow: hidden;
