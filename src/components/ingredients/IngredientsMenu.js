@@ -5,18 +5,18 @@ import Cheese from './Cheese';
 import Meet from './Meet';
 import Other from './Other';
 
-const IngredientsMenu = () => {
+const IngredientsMenu = ({ chosen, setChosen }) => {
   return (
-    <Ings>
-      <Sauce />
-      <Cheese />
-      <Meet />
-      <Other />
-    </Ings>
+    <Ingredients>
+      <Sauce chosen={chosen} setChosen={setChosen} />
+      <Cheese chosen={chosen} setChosen={setChosen} />
+      <Meet chosen={chosen} setChosen={setChosen} />
+      <Other chosen={chosen} setChosen={setChosen} />
+    </Ingredients>
   );
 };
 
-const Ings = styled.div`
+const Ingredients = styled.div`
   position: relative;
   display: flex;
   flex-wrap: wrap;
