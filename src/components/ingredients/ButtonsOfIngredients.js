@@ -1,22 +1,20 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const ButtonsOfIngredients = styled.button`
   display: flex;
-  background-color: ${(props) => (props.active ? "red" : "white")};
+  background-color: ${({ active }) => (active ? '#252525' : '#ffffff')};
+  color: ${({ active }) => (active ? '#ffffff' : '#252525')};
   justify-content: center;
   align-items: center;
   width: 9rem;
   height: 30px;
   border-radius: 5px;
   border: none;
-  outline: none;
+  outline: 0;
   margin: 3px;
   list-style: none;
-
-  /* &:hover {
-    cursor: pointer;
-    background-color: grey;
-  } */
+  cursor: pointer;
+  transition: ease background-color 250ms;
 `;
 
 export default ButtonsOfIngredients;
