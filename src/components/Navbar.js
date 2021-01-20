@@ -43,6 +43,10 @@ const Nav = styled.div`
 
   position: relative;
   padding: 1rem;
+
+  @media (max-width: 768px) {
+    background-repeat: repeat-y;
+  }
 `;
 
 const Logo = styled.a`
@@ -73,6 +77,9 @@ const LogoImg = styled.div`
     margin-top: 15%;
     height: 100px;
     width: 77px;
+
+    /* max-width: 100%;
+    height: auto; */
   }
 `;
 
@@ -97,7 +104,7 @@ const Hamburger = styled.div`
     overflow: hidden;
     position: relative;
     top: 25%;
-    right: 10%;
+    right: 5%;
   }
 `;
 
