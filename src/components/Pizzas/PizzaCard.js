@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import backgroundPhoto from '../../images/cardBgImg.png';
+import backgroundPattern from '../../images/cardBgImg.png';
 
 const PizzaCard = () => {
   return (
@@ -17,7 +17,7 @@ const Card = styled.div`
   align-items: center;
   flex-wrap: wrap;
 
-  background-image: url(${backgroundPhoto});
+  background-image: url(${backgroundPattern});
   background-repeat: no-repeat;
   background-size: 100%;
   width: 351px;
