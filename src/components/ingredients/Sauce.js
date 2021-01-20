@@ -1,45 +1,62 @@
-import { useState } from "react";
-import styled from "styled-components";
-import uuid from "react-uuid";
-import sauce from "../../images/sauce.png";
-import ButtonsOfIngredients from "./ButtonsOfIngredients";
+import { useState } from 'react';
+import styled from 'styled-components';
+import uuid from 'react-uuid';
+import sauce from '../../images/sauce.png';
+import ButtonsOfIngredients from './ButtonsOfIngredients';
 
-const Sauce = () => {
-  const ingredients = ["tomato", "white", "BBQ"];
-  const [color, setColor] = useState("white");
-  const [active, setActive] = useState(false);
-  const [activeId, setActiveId] = useState();
+const Sauce = ({ chosen, setChosen }) => {
+  const [ingredients, setIngredients] = useState([
+    { name: 'tomato', key: uuid(), index: 0, active: false },
+    { name: 'white', key: uuid(), index: 1, active: false },
+    { name: 'BBQ', key: uuid(), index: 2, active: false },
+  ]);
 
-  /*  Sauce.defaultProps = { color: "green", ordered: false }; */
+  const toggleActive = (e) => {
+    const idx = parseInt(e.target.value);
+    setIngredients(
+      [...ingredients],
+      (ingredients[idx]['active'] = !ingredients[idx]['active'])
+    );
+  };
 
-  function changeColor() {
-    setColor("white" ? "grey" : "white");
-  }
+  const toggleChosen = (e) => {
+    const idx = parseInt(e.target.value);
+    const name = ingredients[idx].name;
 
-  function toggleActive() {
-    setActive(!active);
-  }
+    if (ingredients[idx]['active'] && !chosen.includes(name)) {
+      setChosen([...chosen, name]);
+    } else if (!ingredients[idx]['active'] && chosen.includes(name)) {
+      const result = chosen.filter((word) => !word.includes(name));
+      setChosen(result);
+    }
+  };
 
   return (
     <Sauces>
       <h1>
-        Sauce <img src={sauce} alt="sauce" />
+        Sauce <img src={sauce} alt='sauce' />
       </h1>
-      <SauceButtons>
-        {ingredients.map((ingredient) => {
-          return (
-            <ButtonsOfIngredients
-              color={color}
-              active={active}
-              activeId={ingredient.id === activeId}
-              key={uuid()}
-              onClick={toggleActive}
-            >
-              {ingredient}
-            </ButtonsOfIngredients>
-          );
-        })}
-      </SauceButtons>
+
+      {
+        <SauceButtons>
+          {ingredients.map((ingredient) => {
+            return (
+              <ButtonsOfIngredients
+                index={ingredient.index}
+                active={ingredient.active}
+                key={ingredient.key}
+                onClick={(e) => {
+                  toggleActive(e);
+                  toggleChosen(e);
+                }}
+                value={ingredient.index}
+              >
+                {ingredient.name}
+              </ButtonsOfIngredients>
+            );
+          })}
+        </SauceButtons>
+      }
     </Sauces>
   );
 };

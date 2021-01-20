@@ -1,23 +1,44 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 import other from '../../images/other.png';
 import uuid from 'react-uuid';
 import ButtonsOfIngredients from './ButtonsOfIngredients';
 
-const Other = () => {
-  const ingredients = [
-    'pineapple',
-    'corn',
-    'green pepper',
-    'rocket',
-    'mushrooms',
-    'red onion',
-    'black olives',
-    'pepper mix',
-    'cherry tomatoes',
-    'jalapenos',
-    'tomatoes',
-    'spinach leaves',
-  ];
+const Other = ({ chosen, setChosen }) => {
+  const [ingredients, setIngredients] = useState([
+    { name: 'pineapple', key: uuid(), index: 0, active: false },
+    { name: 'corn', key: uuid(), index: 1, active: false },
+    { name: 'green pepper', key: uuid(), index: 2, active: false },
+    { name: 'rocket', key: uuid(), index: 3, active: false },
+    { name: 'mushrooms', key: uuid(), index: 4, active: false },
+    { name: 'red onion', key: uuid(), index: 5, active: false },
+    { name: 'black olives', key: uuid(), index: 6, active: false },
+    { name: 'pepper mix', key: uuid(), index: 7, active: false },
+    { name: 'cherry tomatoes', key: uuid(), index: 8, active: false },
+    { name: 'jalapenos', key: uuid(), index: 9, active: false },
+    { name: 'tomatoes', key: uuid(), index: 10, active: false },
+    { name: 'spinach leaves', key: uuid(), index: 11, active: false },
+  ]);
+
+  const toggleActive = (e) => {
+    const idx = parseInt(e.target.value);
+    setIngredients(
+      [...ingredients],
+      (ingredients[idx]['active'] = !ingredients[idx]['active'])
+    );
+  };
+
+  const toggleChosen = (e) => {
+    const idx = parseInt(e.target.value);
+    const name = ingredients[idx].name;
+
+    if (ingredients[idx]['active'] && !chosen.includes(name)) {
+      setChosen([...chosen, name]);
+    } else if (!ingredients[idx]['active'] && chosen.includes(name)) {
+      const result = chosen.filter((word) => !word.includes(name));
+      setChosen(result);
+    }
+  };
   return (
     <Others>
       <h1>
@@ -26,8 +47,17 @@ const Other = () => {
       <OthersButtons>
         {ingredients.map((ingredient) => {
           return (
-            <ButtonsOfIngredients key={uuid()}>
-              {ingredient}
+            <ButtonsOfIngredients
+              index={ingredient.index}
+              active={ingredient.active}
+              key={ingredient.key}
+              onClick={(e) => {
+                toggleActive(e);
+                toggleChosen(e);
+              }}
+              value={ingredient.index}
+            >
+              {ingredient.name}
             </ButtonsOfIngredients>
           );
         })}
