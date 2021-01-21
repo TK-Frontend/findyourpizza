@@ -1,3 +1,7 @@
+This projekt ma na celu ...
+Wiem, że jest w nim wiele niepotrzebnego kodu, który się powiela i dałoby się go zoptymalizować, i wiem, że jest tutaj nad czym pracować.
+Dziękuję za wszelkie uwagi, sugestie, które pomogą mi w tym aby ten kod stał się lepszy, bardziej czysty.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
