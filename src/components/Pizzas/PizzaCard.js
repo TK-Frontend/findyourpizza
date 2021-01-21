@@ -13,15 +13,14 @@ const PizzaCard = () => {
 
 const Card = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 
   background-image: url(${backgroundPattern});
   background-repeat: no-repeat;
   background-size: 100%;
-  width: 351px;
-  height: 160px;
-  border: 1px solid red;
+  width: 420px;
+  height: 191px;
 `;
 export default PizzaCard;

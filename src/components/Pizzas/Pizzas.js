@@ -6,16 +6,7 @@ import PizzaCard from '../Pizzas/PizzaCard';
 const Pizzas = () => {
   return (
     <AllPizzas>
-      {/*  <PizzaCard /> */}
-
-      {/*  <Ingredients />
-      {recipes.map((recipe) => (
-        <Recipe
-          id={recipe.pizza_id}
-          title={recipe.title}
-          ingredients={recipe.ingredients}
-        />
-      ))} */}
+      <PizzaCard />
     </AllPizzas>
   );
 };
@@ -25,6 +16,7 @@ const AllPizzas = styled.div`
   background-repeat: no-repeat;
   background-size: 100%;
   height: 500px;
+  padding: 5rem;
 `;
 
 export default Pizzas;
