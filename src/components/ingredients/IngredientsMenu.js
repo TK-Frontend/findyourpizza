@@ -1,9 +1,9 @@
-import styled from 'styled-components';
-import backgroundPhoto from '../../images/backgroundPizza.png';
-import Sauce from './Sauce';
-import Cheese from './Cheese';
-import Meet from './Meet';
-import Other from './Other';
+import styled from "styled-components";
+import backgroundPhoto from "../../images/backgroundPizza.png";
+import Sauce from "./Sauce";
+import Cheese from "./Cheese";
+import Meet from "./Meet";
+import Other from "./Other";
 
 const IngredientsMenu = ({ chosen, setChosen }) => {
   return (
@@ -22,7 +22,7 @@ const Ingredients = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  width: 100vw;
+  width: 100%;
   background-image: url(${backgroundPhoto});
   background-repeat: no-repeat;
   background-size: 100%;
