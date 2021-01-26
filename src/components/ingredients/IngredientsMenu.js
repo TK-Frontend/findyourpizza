@@ -2,7 +2,7 @@ import styled from "styled-components";
 import backgroundPhoto from "../../images/backgroundPizza.png";
 import Sauce from "./Sauce";
 import Cheese from "./Cheese";
-import Meet from "./Meet";
+import Meat from "./Meat";
 import Other from "./Other";
 
 const IngredientsMenu = ({ chosen, setChosen }) => {
@@ -10,7 +10,7 @@ const IngredientsMenu = ({ chosen, setChosen }) => {
     <Ingredients>
       <Sauce chosen={chosen} setChosen={setChosen} />
       <Cheese chosen={chosen} setChosen={setChosen} />
-      <Meet chosen={chosen} setChosen={setChosen} />
+      <Meat chosen={chosen} setChosen={setChosen} />
       <Other chosen={chosen} setChosen={setChosen} />
     </Ingredients>
   );
