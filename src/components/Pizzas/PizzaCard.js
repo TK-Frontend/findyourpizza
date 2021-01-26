@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import backgroundPattern from '../../images/cardBgImg.png';
+import backgroundPattern from "../../images/cardBgImg.png";
 
 const PizzaCard = () => {
   return (
@@ -12,10 +12,9 @@ const PizzaCard = () => {
 };
 
 const Card = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(16, 1fr);
 
   background-image: url(${backgroundPattern});
   background-repeat: no-repeat;
