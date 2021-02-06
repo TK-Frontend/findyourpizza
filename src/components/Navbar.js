@@ -6,42 +6,51 @@ import backgroundPhoto from '../images/blackboard-texture.jpg';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <Nav>
-      <Logo>
-        <LogoText>
-          <h2>Find Your</h2>
-          <h1>Pizza</h1>
-        </LogoText>
-        <LogoImg>
-          <img src={logo} alt='logo' />
-        </LogoImg>
-      </Logo>
+    <Container>
+      <Nav>
+        <Logo>
+          <LogoText>
+            <h2>Find Your</h2>
+            <h1>Pizza</h1>
+          </LogoText>
+          <LogoImg>
+            <img src={logo} alt='logo' />
+          </LogoImg>
+        </Logo>
 
-      <Hamburger onClick={() => setIsOpen(!isOpen)}>
-        <span />
-        <span />
-        <span />
-      </Hamburger>
-      <Menu isOpen={isOpen}>
-        <MenuLink href=''>Home</MenuLink>
-        <MenuLink href=''>Menu</MenuLink>
-        <MenuLink href=''>About</MenuLink>
-      </Menu>
-    </Nav>
+        <Hamburger onClick={() => setIsOpen(!isOpen)}>
+          <span />
+          <span />
+          <span />
+        </Hamburger>
+        <Menu isOpen={isOpen}>
+          <MenuLink href=''>Home</MenuLink>
+          <MenuLink href=''>Menu</MenuLink>
+          <MenuLink href=''>About</MenuLink>
+        </Menu>
+      </Nav>
+    </Container>
   );
 };
 
+const Container = styled.div`
+  width: 100%;
+  position: relative;
+  
+  background-image: url(${backgroundPhoto});
+  background-repeat: no-repeat;
+  background-size: 100%;
+`
+
 const Nav = styled.div`
+  position: relative;
+  width: 85rem;
+  max-width: 90vw;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-
-  background-image: url(${backgroundPhoto});
-  background-repeat: no-repeat;
-  background-size: 100%;
-
-  position: relative;
   padding: 1rem;
 
   @media (max-width: 768px) {
@@ -52,7 +61,7 @@ const Nav = styled.div`
 const Logo = styled.a`
   display: flex;
   position: relative;
-  left: 5%;
+  //left: 5%;
 `;
 
 const LogoText = styled.div`
@@ -87,7 +96,7 @@ const Hamburger = styled.div`
   display: none;
   position: absolute;
   top: 25%;
-  right: 10%;
+  //right: 10%;
   cursor: pointer;
   width: 25px;
 
@@ -115,7 +124,7 @@ const Menu = styled.div`
   justify-content: space-between;
 
   position: relative;
-  right: 5%;
+  //right: 5%;
 
   padding-left: 50px;
   padding-bottom: 10px;
