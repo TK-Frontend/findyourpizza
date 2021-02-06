@@ -1,20 +1,31 @@
-import styled from "styled-components";
-import backgroundPhoto from "../../images/backgroundPizza.png";
-import Sauce from "./Sauce";
-import Cheese from "./Cheese";
-import Meat from "./Meat";
-import Other from "./Other";
+import styled from 'styled-components';
+import backgroundPhoto from '../../images/backgroundPizza.png';
+import Sauce from './Sauce';
+import Cheese from './Cheese';
+import Meat from './Meat';
+import Other from './Other';
 
 const IngredientsMenu = ({ chosen, setChosen }) => {
   return (
-    <Ingredients>
-      <Sauce chosen={chosen} setChosen={setChosen} />
-      <Cheese chosen={chosen} setChosen={setChosen} />
-      <Meat chosen={chosen} setChosen={setChosen} />
-      <Other chosen={chosen} setChosen={setChosen} />
-    </Ingredients>
+    <Container>
+      <Ingredients>
+        <Sauce chosen={chosen} setChosen={setChosen} />
+        <Cheese chosen={chosen} setChosen={setChosen} />
+        <Meat chosen={chosen} setChosen={setChosen} />
+        <Other chosen={chosen} setChosen={setChosen} />
+      </Ingredients>
+    </Container>
   );
 };
+
+const Container = styled.div`
+  width: 100%;
+  position: relative;
+
+  background-image: url(${backgroundPhoto});
+  background-repeat: inherit;
+  background-size: 100%;
+`;
 
 const Ingredients = styled.div`
   position: relative;
@@ -22,10 +33,9 @@ const Ingredients = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  width: 100%;
-  background-image: url(${backgroundPhoto});
-  background-repeat: no-repeat;
-  background-size: 100%;
+  margin: 0 auto;
+  width: 88rem;
+  max-width: 90vw;
 
   color: white;
 
