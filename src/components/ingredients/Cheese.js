@@ -60,7 +60,7 @@ const Cheese = ({ chosen, setChosen }) => {
 const Cheeses = styled.div`
   display: flex;
   flex-direction: column;
-  flex-basis: 25%;
+  flex-basis: 28%;
   align-items: center;
   padding-top: 1rem;
   h1 {

@@ -62,11 +62,12 @@ const Sauce = ({ chosen, setChosen }) => {
 };
 
 const Sauces = styled.div`
-  padding-top: 1rem;
   display: flex;
   flex-direction: column;
-  flex-basis: 25%;
+  flex-basis: 36%;
   align-items: center;
+  padding: 1rem;
+
   h1 {
     font-size: 1.2rem;
     font-weight: 300;

@@ -71,7 +71,7 @@ const Others = styled.div`
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  flex-basis: 90%;
+  flex-basis: 100%;
   align-items: center;
 
   button {
