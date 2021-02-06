@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import backgroundPattern from "../../images/cardBgImg.png";
+import backgroundPattern from '../../images/cardBgImgNoRad.png';
 
 const PizzaCard = () => {
   return (
@@ -13,13 +13,14 @@ const PizzaCard = () => {
 
 const Card = styled.div`
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(16, 1fr);
+  grid-template-columns: repeat(22, 1fr);
+  grid-template-rows: repeat(10, 1fr);
 
   background-image: url(${backgroundPattern});
   background-repeat: no-repeat;
   background-size: 100%;
-  width: 420px;
-  height: 191px;
+  width: 484px;
+  height: 220px;
+  border-radius: 15px;
 `;
 export default PizzaCard;
