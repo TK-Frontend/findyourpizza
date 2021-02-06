@@ -1,14 +1,14 @@
-import React from "react";
-import styled from "styled-components";
-import pattern from "../../images/pattern.png";
-import PizzaCard from "../Pizzas/PizzaCard";
-import cardLayout from "../../images/cardLayout.png";
+import React from 'react';
+import styled from 'styled-components';
+import pattern from '../../images/pattern.png';
+import PizzaCard from '../Pizzas/PizzaCard';
+import cardLayout from '../../images/cardLayoutGrid.png';
 
 const Pizzas = () => {
   return (
     <AllPizzas>
       <PizzaCard />
-      <img src={cardLayout} alt="card" />
+      <img src={cardLayout} alt='card' />
     </AllPizzas>
   );
 };
@@ -27,8 +27,7 @@ const AllPizzas = styled.div`
   // border: 2px solid cadetblue;
 
   img {
-    margin-top: -12px;
-    max-width: 85%;
+    max-width: 88%;
     height: auto;
   }
 `;
