@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/findyourpizza/static/css/main.3f3717a3.chunk.css",
-    "main.js": "/findyourpizza/static/js/main.566c07e8.chunk.js",
-    "main.js.map": "/findyourpizza/static/js/main.566c07e8.chunk.js.map",
+    "main.js": "/findyourpizza/static/js/main.2a11a143.chunk.js",
+    "main.js.map": "/findyourpizza/static/js/main.2a11a143.chunk.js.map",
     "runtime-main.js": "/findyourpizza/static/js/runtime-main.a65c72d9.js",
     "runtime-main.js.map": "/findyourpizza/static/js/runtime-main.a65c72d9.js.map",
     "static/js/2.3aa14a0a.chunk.js": "/findyourpizza/static/js/2.3aa14a0a.chunk.js",
@@ -16,12 +16,13 @@
     "static/media/cardBgImgNoRad.f2b32f02.png": "/findyourpizza/static/media/cardBgImgNoRad.f2b32f02.png",
     "static/media/cardLayoutGrid.31787690.png": "/findyourpizza/static/media/cardLayoutGrid.31787690.png",
     "static/media/logo.57e5af5d.png": "/findyourpizza/static/media/logo.57e5af5d.png",
-    "static/media/pattern.9183d6fb.png": "/findyourpizza/static/media/pattern.9183d6fb.png"
+    "static/media/pattern.9183d6fb.png": "/findyourpizza/static/media/pattern.9183d6fb.png",
+    "static/media/pizza-img.d10b88c5.png": "/findyourpizza/static/media/pizza-img.d10b88c5.png"
   },
   "entrypoints": [
     "static/js/runtime-main.a65c72d9.js",
     "static/js/2.3aa14a0a.chunk.js",
     "static/css/main.3f3717a3.chunk.css",
-    "static/js/main.566c07e8.chunk.js"
+    "static/js/main.2a11a143.chunk.js"
   ]
 }
