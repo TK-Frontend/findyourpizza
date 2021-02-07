@@ -23,6 +23,7 @@ const AllPizzas = styled.div`
   background-size: 100%;
 
   padding: 1rem;
+  width: 100%;
 
   // border: 2px solid cadetblue;
 
