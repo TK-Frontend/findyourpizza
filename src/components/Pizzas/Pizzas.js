@@ -4,10 +4,10 @@ import pattern from '../../images/pattern.png';
 import PizzaCard from '../Pizzas/PizzaCard';
 import cardLayout from '../../images/cardLayoutGrid.png';
 
-const Pizzas = () => {
+const Pizzas = ({ chosen }) => {
   return (
     <AllPizzas>
-      <PizzaCard />
+      <PizzaCard chosen={chosen} />
       <img src={cardLayout} alt='card' />
     </AllPizzas>
   );
