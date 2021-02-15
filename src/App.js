@@ -1,14 +1,11 @@
-import { useState } from "react";
-import styled from "styled-components";
-import Navbar from "./components/Navbar";
-import IngredientsMenu from "./components/ingredients/IngredientsMenu";
-import Pizzas from "./components/Pizzas/Pizzas";
+import { useState } from 'react';
+import styled from 'styled-components';
+import Navbar from './components/Navbar';
+import IngredientsMenu from './components/ingredients/IngredientsMenu';
+import Pizzas from './components/Pizzas/Pizzas';
 
 const App = () => {
   const [chosenIngredients, setChosenIngredients] = useState([]);
-
-  console.log(chosenIngredients);
-
   return (
     <Container>
       <Navbar />
@@ -16,7 +13,7 @@ const App = () => {
         chosen={chosenIngredients}
         setChosen={setChosenIngredients}
       />
-      <Pizzas />
+      <Pizzas chosen={chosenIngredients} />
     </Container>
   );
 };
