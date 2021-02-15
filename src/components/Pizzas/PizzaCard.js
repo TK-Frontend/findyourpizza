@@ -1,16 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
+import pizzaList from './pizzaList';
 import pizzaImage from '../../images/pizza-img.png';
-
 import backgroundPattern from '../../images/cardBgImgNoRad.png';
 
-const PizzaCard = () => {
+const PizzaCard = ({ chosen }) => {
   return (
-    <Card>
-      <img src={pizzaImage} alt='img' className='imageOfPizza' />
-      <h1 className='name'>1. Pepperoni</h1>
-      <h2 className='ing'>tomato sauce, mozzarella, pepperoni</h2>
-    </Card>
+    <>
+      {
+        // Sprawdzic ktory element z tablicy pizzaList pasuje do zaznaczonych
+        // Metodą filter zostawić tylko te pizze z pizzaList które includes chosen
+        // Na podstawie tego wyswietlic te karty dynamicznie nadajac im nazwy i skladniki
+      }
+      {console.log(`test2`)}
+      <Card>
+        <img src={pizzaImage} alt='img' className='imageOfPizza' />
+        <h1 className='name'>1. Pepperoni</h1>
+        <h2 className='ing'>tomato sauce, mozzarella, pepperoni</h2>
+        {console.log(chosen)}
+      </Card>
+    </>
   );
 };
 
@@ -48,6 +57,7 @@ const Card = styled.div`
     grid-area: name;
     font-family: 'Archistico';
     color: white;
+    border-bottom: 2px dashed white;
   }
 
   .ing {
