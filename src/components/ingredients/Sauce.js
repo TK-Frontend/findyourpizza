@@ -36,27 +36,24 @@ const Sauce = ({ chosen, setChosen }) => {
       <h1>
         Sauce <img src={sauce} alt='sauce' />
       </h1>
-
-      {
-        <SauceButtons>
-          {ingredients.map((ingredient) => {
-            return (
-              <ButtonsOfIngredients
-                index={ingredient.index}
-                active={ingredient.active}
-                key={ingredient.key}
-                onClick={(e) => {
-                  toggleActive(e);
-                  toggleChosen(e);
-                }}
-                value={ingredient.index}
-              >
-                {ingredient.name}
-              </ButtonsOfIngredients>
-            );
-          })}
-        </SauceButtons>
-      }
+      <SauceButtons>
+        {ingredients.map((ingredient) => {
+          return (
+            <ButtonsOfIngredients
+              index={ingredient.index}
+              active={ingredient.active}
+              key={ingredient.key}
+              onClick={(e) => {
+                toggleActive(e);
+                toggleChosen(e);
+              }}
+              value={ingredient.index}
+            >
+              {ingredient.name}
+            </ButtonsOfIngredients>
+          );
+        })}
+      </SauceButtons>
     </Sauces>
   );
 };
