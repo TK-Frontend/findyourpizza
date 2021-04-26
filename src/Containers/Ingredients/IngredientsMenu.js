@@ -1,9 +1,9 @@
-import styled from 'styled-components';
-import backgroundPhoto from '../../images/backgroundPizza.png';
-import Sauce from './Sauce';
-import Cheese from './Cheese';
-import Meat from './Meat';
-import Other from './Other';
+import styled from "styled-components";
+import backgroundPhoto from "../../assets/images/backgroundPizza.png";
+import Sauce from "./Sauce";
+import Cheese from "./Cheese";
+import Meat from "./Meat";
+import Other from "./Other";
 
 const IngredientsMenu = ({ chosen, setChosen }) => {
   return (

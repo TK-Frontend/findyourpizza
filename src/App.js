@@ -1,28 +1,21 @@
-import { useState } from 'react';
-import styled from 'styled-components';
-import Navbar from './components/Navbar';
-import IngredientsMenu from './components/ingredients/IngredientsMenu';
-import Pizzas from './components/Pizzas/Pizzas';
+import "./App.css";
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+import Home from "./Pages/Home";
 
 const App = () => {
-  const [chosenIngredients, setChosenIngredients] = useState([]);
   return (
-    <Container>
-      <Navbar />
-      <IngredientsMenu
-        chosen={chosenIngredients}
-        setChosen={setChosenIngredients}
-      />
-      <Pizzas chosen={chosenIngredients} />
-    </Container>
+    <div className="App">
+      <BrowserRouter>
+        <Switch>
+          <Route path="/home" component={Home} />
+          <Route path="*">
+            {" "}
+            <Redirect to="/home" />{" "}
+          </Route>
+        </Switch>
+      </BrowserRouter>
+    </div>
   );
 };
-
-const Container = styled.div`
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: auto;
-`;
 
 export default App;

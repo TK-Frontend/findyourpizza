@@ -1,21 +1,20 @@
-import { useState } from 'react';
-import styled from 'styled-components';
-import uuid from 'react-uuid';
-import sauce from '../../images/sauce.png';
-import ButtonsOfIngredients from './ButtonsOfIngredients';
+import { useState } from "react";
+import styled from "styled-components";
+import uuid from "react-uuid";
+import cheese from "../../assets/images/cheese.png";
+import ButtonsOfIngredients from "./ButtonsOfIngredients";
 
-const Sauce = ({ chosen, setChosen }) => {
+const Cheese = ({ chosen, setChosen }) => {
   const [ingredients, setIngredients] = useState([
-    { name: 'tomato', key: uuid(), index: 0, active: false },
-    { name: 'white', key: uuid(), index: 1, active: false },
-    { name: 'BBQ', key: uuid(), index: 2, active: false },
+    { name: "mozarella", key: uuid(), index: 0, active: false },
+    { name: "corregio", key: uuid(), index: 1, active: false },
   ]);
 
   const toggleActive = (e) => {
     const idx = parseInt(e.target.value);
     setIngredients(
       [...ingredients],
-      (ingredients[idx]['active'] = !ingredients[idx]['active'])
+      (ingredients[idx]["active"] = !ingredients[idx]["active"])
     );
   };
 
@@ -23,20 +22,20 @@ const Sauce = ({ chosen, setChosen }) => {
     const idx = parseInt(e.target.value);
     const name = ingredients[idx].name;
 
-    if (ingredients[idx]['active'] && !chosen.includes(name)) {
+    if (ingredients[idx]["active"] && !chosen.includes(name)) {
       setChosen([...chosen, name]);
-    } else if (!ingredients[idx]['active'] && chosen.includes(name)) {
+    } else if (!ingredients[idx]["active"] && chosen.includes(name)) {
       const result = chosen.filter((word) => !word.includes(name));
       setChosen(result);
     }
   };
 
   return (
-    <Sauces>
+    <Cheeses>
       <h1>
-        Sauce <img src={sauce} alt='sauce' />
+        Cheese <img src={cheese} alt="cheese" />
       </h1>
-      <SauceButtons>
+      <CheeseButtons>
         {ingredients.map((ingredient) => {
           return (
             <ButtonsOfIngredients
@@ -53,18 +52,17 @@ const Sauce = ({ chosen, setChosen }) => {
             </ButtonsOfIngredients>
           );
         })}
-      </SauceButtons>
-    </Sauces>
+      </CheeseButtons>
+    </Cheeses>
   );
 };
 
-const Sauces = styled.div`
+const Cheeses = styled.div`
   display: flex;
   flex-direction: column;
-  flex-basis: 36%;
+  flex-basis: 28%;
   align-items: center;
-  padding: 1rem;
-
+  padding-top: 1rem;
   h1 {
     font-size: 1.2rem;
     font-weight: 300;
@@ -74,16 +72,15 @@ const Sauces = styled.div`
     width: 20px;
     height: 20px;
   }
-
   @media (max-width: 768px) {
     flex-basis: auto;
   }
 `;
 
-const SauceButtons = styled.div`
+const CheeseButtons = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 `;
 
-export default Sauce;
+export default Cheese;
