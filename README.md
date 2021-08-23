@@ -1,8 +1,16 @@
-Does it take too long to choose the right pizza when you stay at a pizzeria?
-Need to read all the ingredients before customizing your pizzas to your liking?
-This takes too long and is very tedious.
-That is why this application was created, which aims to speed up the choice of pizza by choosing the right ingredients that you like.
-(I am still working on completing the application)
+This application will help you discover your favorite pizza, based on the ingredients entered ;)
 
 You can see a preview here:
-https://teqapp.github.io/findyourpizza/
+https://tk-frontend.github.io/findyourpizza/
+
+Technologies used:
+
+CSS: flexbox, grid, @fontface
+JavaScript: every, filter, includes, join, map, match, RegExp, ES6 (Let + Const, Arrows, Template Strings, Destructuring, Spread)
+React: useState, useContext, uuid
+Others: styled-components
+
+I know it isn't perfect, but it works correctly ;) I was doing my best
+If you have any suggestions what I can improve / modify, be sure to write to me.
+
+Enjoy!
