@@ -1,35 +1,38 @@
-import "./App.css";
-import { ThemeContext, themes } from './Contexts/ThemeContext'
-import { SelectedIngredientsProvider } from "./Contexts/SelectedIngredientsContext";
+import { ThemeContext, themes } from './contexts/ThemeContext'
+import { SelectedIngredientsProvider } from "./contexts/SelectedIngredientsContext";
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import styled from "styled-components";
-import Navbar from "./Components/Navbar/Navbar";
-import CategoriesView from "./Components/Ingredients/CategoriesView";
-import BakedPizzas from "./Components/PizzaOven/BakedPizzas";
-import Footer from './Components/Footer/Footer';
+import Navbar from "./layout/Navbar";
+import IngredientCategories from "./layout/IngredientCategories"
+import SelectedPizzas from "./layout/SelectedPizzas";
+import Footer from './layout/Footer'
 
 const App = () => {
   return (
-    <div className="App">
+    <BrowserRouter>
       <Container>
         <Navbar />
         <SelectedIngredientsProvider>
           <ThemeContext.Provider value={themes.light}>
-            <CategoriesView />
+            <IngredientCategories />
           </ThemeContext.Provider >
-          <BakedPizzas />
+          <SelectedPizzas />
         </SelectedIngredientsProvider>
         <Footer />
+        <Switch>
+          <Route path="*">
+            {" "}
+            <Redirect to="/" />{" "}
+          </Route>
+        </Switch>
       </Container>
-    </div>
+    </BrowserRouter>
   );
 };
 
 const Container = styled.div`
   display: flex;
-  flex-direction: column;
-  min-width: 100%;
-  min-height: 100%;
-  overflow: auto;
-`;
+  flex-direction: column; 
+  `;
 
 export default App;
