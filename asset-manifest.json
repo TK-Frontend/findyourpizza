@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/findyourpizza/static/css/main.3eff3215.chunk.css",
-    "main.js": "/findyourpizza/static/js/main.2723d28b.chunk.js",
-    "main.js.map": "/findyourpizza/static/js/main.2723d28b.chunk.js.map",
+    "main.css": "/findyourpizza/static/css/main.b8336f89.chunk.css",
+    "main.js": "/findyourpizza/static/js/main.22d4fde6.chunk.js",
+    "main.js.map": "/findyourpizza/static/js/main.22d4fde6.chunk.js.map",
     "runtime-main.js": "/findyourpizza/static/js/runtime-main.7549c191.js",
     "runtime-main.js.map": "/findyourpizza/static/js/runtime-main.7549c191.js.map",
-    "static/js/2.f7420c99.chunk.js": "/findyourpizza/static/js/2.f7420c99.chunk.js",
-    "static/js/2.f7420c99.chunk.js.map": "/findyourpizza/static/js/2.f7420c99.chunk.js.map",
+    "static/js/2.30a08401.chunk.js": "/findyourpizza/static/js/2.30a08401.chunk.js",
+    "static/js/2.30a08401.chunk.js.map": "/findyourpizza/static/js/2.30a08401.chunk.js.map",
     "index.html": "/findyourpizza/index.html",
-    "static/css/main.3eff3215.chunk.css.map": "/findyourpizza/static/css/main.3eff3215.chunk.css.map",
-    "static/js/2.f7420c99.chunk.js.LICENSE.txt": "/findyourpizza/static/js/2.f7420c99.chunk.js.LICENSE.txt",
+    "static/css/main.b8336f89.chunk.css.map": "/findyourpizza/static/css/main.b8336f89.chunk.css.map",
+    "static/js/2.30a08401.chunk.js.LICENSE.txt": "/findyourpizza/static/js/2.30a08401.chunk.js.LICENSE.txt",
     "static/media/index.css": "/findyourpizza/static/media/KgTenThousandReasons.152e9033.ttf",
-    "static/media/backgroundPizza.dc052f1f.png": "/findyourpizza/static/media/backgroundPizza.dc052f1f.png",
+    "static/media/americana.fcc94a34.png": "/findyourpizza/static/media/americana.fcc94a34.png",
+    "static/media/bgMob.33d98b4e.png": "/findyourpizza/static/media/bgMob.33d98b4e.png",
+    "static/media/bgWeb2.9f7b75e4.png": "/findyourpizza/static/media/bgWeb2.9f7b75e4.png",
     "static/media/blackboard-texture.fa78fbc8.png": "/findyourpizza/static/media/blackboard-texture.fa78fbc8.png",
     "static/media/blackboard.8ab931e8.png": "/findyourpizza/static/media/blackboard.8ab931e8.png",
     "static/media/capriciossa.bb104bdb.png": "/findyourpizza/static/media/capriciossa.bb104bdb.png",
@@ -34,8 +36,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.7549c191.js",
-    "static/js/2.f7420c99.chunk.js",
-    "static/css/main.3eff3215.chunk.css",
-    "static/js/main.2723d28b.chunk.js"
+    "static/js/2.30a08401.chunk.js",
+    "static/css/main.b8336f89.chunk.css",
+    "static/js/main.22d4fde6.chunk.js"
   ]
 }
