@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import ToggleSelected from '../../utils/ToggleSelected'
-import ToggleColors from "../../utils/ToggleColors";
+import ToggleSelected from '../utils/ToggleSelected'
+import ToggleColors from "../utils/ToggleColors";
 import { useContext } from "react";
-import { SelectedIngredientsContext } from "../../Contexts/SelectedIngredientsContext";
-import { themes } from '../../Contexts/ThemeContext';
+import { SelectedIngredientsContext } from "../contexts/SelectedIngredientsContext";
+import { themes } from '../contexts/ThemeContext';
 
-const SectionButtons = ({ listOfIngredients, setListOfIngredients, categoryName, categoryImage }) => {
+const Button = ({ listOfIngredients, setListOfIngredients, categoryName, categoryImage }) => {
   const [selectedIngredients, setSelectedIngredients] = useContext(SelectedIngredientsContext)
 
   return (
@@ -57,4 +57,4 @@ const IngredientButton = styled.button`
   transition: ease background-color 250ms;
 `;
 
-export default SectionButtons
+export default Button

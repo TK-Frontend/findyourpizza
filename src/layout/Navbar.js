@@ -1,22 +1,25 @@
 import React, { useState } from "react";
 import styled from 'styled-components'
-import logo from "../../assets/images/logo.png";
-import blackboard from "../../assets/images/bgImages/blackboard-texture.png";
+import logo from "../assets/images/logo.png";
+import blackboard from "../assets/images/bgImages/blackboard-texture.png";
+import { Link } from 'react-scroll';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <Container>
       <Nav>
-        <Logo>
-          <LogoText>
-            <h2>Find Your</h2>
-            <h1>Pizza</h1>
-          </LogoText>
-          <LogoImg>
-            <img src={logo} alt="logo" />
-          </LogoImg>
-        </Logo>
+        <a href="/">
+          <Logo>
+            <LogoText>
+              <h2>Find Your</h2>
+              <h1>Pizza</h1>
+            </LogoText>
+            <LogoImg>
+              <img src={logo} alt="logo" />
+            </LogoImg>
+          </Logo>
+        </a>
         <Hamburger onClick={() => setIsOpen(!isOpen)}>
           <span />
           <span />
@@ -24,13 +27,19 @@ const Navbar = () => {
         </Hamburger>
         <Menu isOpen={isOpen}>
           <MenuLink>
-            Ingredients
+            <Link to="ingredients" smooth={true}>
+              Ingredients
+            </Link>
           </MenuLink>
           <MenuLink>
-            Pizzas
+            <Link to="pizzas" smooth={true}>
+              Pizzas
+            </Link>
           </MenuLink>
           <MenuLink>
-            About
+            <Link to="footer" smooth={true}>
+              About
+            </Link>
           </MenuLink>
         </Menu>
       </Nav>
@@ -55,24 +64,28 @@ const Nav = styled.nav`
   align-items: center;
   flex-wrap: wrap;
   padding: 1rem;
+  a {
+    text-decoration: none;  
+  }
  `;
 
 const Logo = styled.div`
   display: flex;
   position: relative;
-`;
+
+  `;
 
 const LogoText = styled.div`
   margin: auto 0;
   text-align: right;
   color: white;
-
+  
   h1 {
     font-size: 2rem;
     text-transform: uppercase;
     font-family: "Archistico Bold";
   }
-    h2 {
+  h2 {
     font-size: 1rem;
   }
 `

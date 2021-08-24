@@ -1,10 +1,10 @@
 import { useState } from "react";
 import styled from "styled-components";
-import others from "../../../assets/images/categories/others.png";
+import other from "../../assets/images/categories/other.png";
 import uuid from "react-uuid";
-import SectionButtons from "../SectionButtons";
+import Button from "../Button";
 
-const Others = () => {
+const Other = () => {
   const [listOfIngredients, setListOfIngredients] = useState([
     { name: "pineapple", key: uuid(), active: false },
     { name: "corn", key: uuid(), active: false },
@@ -20,12 +20,12 @@ const Others = () => {
     { name: "spinach leaves", key: uuid(), active: false },
   ]);
 
-  const categoryName = 'Others'
-  const categoryImage = others
+  const categoryName = 'Other'
+  const categoryImage = other
 
   return (
     <Section>
-      <SectionButtons
+      <Button
         listOfIngredients={listOfIngredients}
         setListOfIngredients={setListOfIngredients}
         categoryName={categoryName}
@@ -40,27 +40,29 @@ const Section = styled.div`
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  flex-basis: 100%;
+  flex-basis: 80%;
   align-items: center;
+  padding: 1rem;
 
   button {
     display: flex;
     flex-direction: column;
   }
 
-  padding: 1rem;
   h1 {
     font-size: 1.2rem;
     font-weight: 300;
     text-align: center;
-    img {
-      width: 20px;
-      height: 20px;
+
+  img {
+    width: 20px;
+    height: 20px;
     }
   }
+  
   @media (max-width: 768px) {
     flex-basis: auto;
   }
 `;
 
-export default Others;
+export default Other;

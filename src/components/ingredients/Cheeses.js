@@ -1,22 +1,22 @@
 import { useState } from "react";
 import styled from "styled-components";
 import uuid from "react-uuid";
-import sauce from "../../../assets/images/categories/sauce.png";
-import SectionButtons from "../SectionButtons";
+import cheese from "../../assets/images/categories/cheese.png";
+import Button from "../Button";
 
-const Sauces = () => {
+const Cheeses = () => {
   const [listOfIngredients, setListOfIngredients] = useState([
-    { name: "tomato", key: uuid(), active: false },
-    { name: "white", key: uuid(), active: false },
-    { name: "BBQ", key: uuid(), active: false },
+    { name: "mozzarella", key: uuid(), active: false },
+    { name: "corregio", key: uuid(), active: false },
+    { name: "fresh mozzarella", key: uuid(), active: false },
   ]);
 
-  const categoryName = 'Sauces'
-  const categoryImage = sauce
+  const categoryName = 'Cheeses'
+  const categoryImage = cheese
 
   return (
     <Section>
-      <SectionButtons
+      <Button
         listOfIngredients={listOfIngredients}
         setListOfIngredients={setListOfIngredients}
         categoryName={categoryName}
@@ -29,7 +29,7 @@ const Sauces = () => {
 const Section = styled.div`
   display: flex;
   flex-direction: column;
-  flex-basis: 36%;
+  flex-basis: 43%;
   align-items: center;
   padding: 1rem;
 
@@ -38,14 +38,15 @@ const Section = styled.div`
     font-weight: 300;
     text-align: center;
   }
+
   img {
     width: 20px;
     height: 20px;
   }
-
+  
   @media (max-width: 768px) {
     flex-basis: auto;
   }
 `;
 
-export default Sauces;
+export default Cheeses;

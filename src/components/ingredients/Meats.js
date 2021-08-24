@@ -1,8 +1,8 @@
 import { useState } from "react";
 import styled from "styled-components";
 import uuid from "react-uuid";
-import meat from "../../../assets/images/categories/meat.png";
-import SectionButtons from "../SectionButtons";
+import meat from "../../assets/images/categories/meat.png";
+import SectionButtons from "../Button";
 
 const Meets = () => {
   const [listOfIngredients, setListOfIngredients] = useState([
@@ -33,7 +33,7 @@ const Meets = () => {
 const Section = styled.div`
   display: flex;
   flex-direction: row;
-  flex-basis: 36%;
+  flex-basis: 80%;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -44,10 +44,12 @@ const Section = styled.div`
     font-weight: 300;
     text-align: center;
   }
+
   img {
     width: 20px;
     height: 20px;
   }
+  
   @media (max-width: 768px) {
     flex-basis: auto;
   }

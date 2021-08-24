@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import blackboardPattern from "../../assets/images/bgImages/blackboard.png";
+import blackboardPattern from "../assets/images/bgImages/blackboard.png";
 import Recipes from './Recipes'
 import { useContext } from "react";
-import { SelectedIngredientsContext } from "../../Contexts/SelectedIngredientsContext";
+import { SelectedIngredientsContext } from "../contexts/SelectedIngredientsContext";
 
 const PizzaCards = () => {
   const [selectedIngredients] = useContext(SelectedIngredientsContext)

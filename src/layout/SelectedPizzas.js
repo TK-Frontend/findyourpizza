@@ -1,17 +1,20 @@
 import styled from "styled-components";
-import pattern from "../../assets/images/bgImages/pattern20.png";
-import PizzaCards from "./PizzaCards";
-import Message from "./Message";
+import pattern from "../assets/images/bgImages/pattern20.png";
+import PizzaCards from "../components/PizzaCards";
+import Message from "../components/Message";
 import { useContext } from "react";
-import { SelectedIngredientsContext } from '../../Contexts/SelectedIngredientsContext'
+import { SelectedIngredientsContext } from '../contexts/SelectedIngredientsContext'
+import { Element } from "react-scroll";
 
-const BakedPizzas = () => {
+const SelectedPizzas = () => {
   const [selectedIngredients] = useContext(SelectedIngredientsContext)
 
   return (
-    <Container>
-      {!selectedIngredients.length ? <Message /> : <AllPizzas><PizzaCards /></AllPizzas>}
-    </Container>
+    <Element name="pizzas">
+      <Container>
+        {!selectedIngredients.length ? <Message /> : <AllPizzas><PizzaCards /></AllPizzas>}
+      </Container>
+    </Element>
   );
 };
 
@@ -46,4 +49,4 @@ const AllPizzas = styled.div`
   }
 `
 
-export default BakedPizzas;
+export default SelectedPizzas;
