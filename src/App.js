@@ -1,5 +1,5 @@
-import { ThemeContext, themes } from './contexts/ThemeContext'
-import { SelectedIngredientsProvider } from "./contexts/SelectedIngredientsContext";
+import { ThemeContext, themes } from './context/ThemeContext'
+import { SelectedIngredientsProvider } from "./context/SelectedIngredientsContext";
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import styled from "styled-components";
 import Navbar from "./layout/Navbar";
@@ -10,22 +10,22 @@ import Footer from './layout/Footer'
 const App = () => {
   return (
     <BrowserRouter>
-      <Container>
-        <Navbar />
+      <ThemeContext.Provider value={themes.light}>
         <SelectedIngredientsProvider>
-          <ThemeContext.Provider value={themes.light}>
+          <Container>
+            <Navbar />
             <IngredientCategories />
-          </ThemeContext.Provider >
-          <SelectedPizzas />
+            <SelectedPizzas />
+            <Footer />
+            <Switch>
+              <Route path="*">
+                {" "}
+                <Redirect to="/findyourpizza" />{" "}
+              </Route>
+            </Switch>
+          </Container>
         </SelectedIngredientsProvider>
-        <Footer />
-        <Switch>
-          <Route path="*">
-            {" "}
-            <Redirect to="/" />{" "}
-          </Route>
-        </Switch>
-      </Container>
+      </ThemeContext.Provider >
     </BrowserRouter>
   );
 };
