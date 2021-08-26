@@ -2,8 +2,8 @@ import styled from "styled-components";
 import ToggleSelected from '../utils/ToggleSelected'
 import ToggleColors from "../utils/ToggleColors";
 import { useContext } from "react";
-import { SelectedIngredientsContext } from "../contexts/SelectedIngredientsContext";
-import { themes } from '../contexts/ThemeContext';
+import { SelectedIngredientsContext } from "../context/SelectedIngredientsContext";
+import { themes } from '../context/ThemeContext';
 
 const Button = ({ listOfIngredients, setListOfIngredients, categoryName, categoryImage }) => {
   const [selectedIngredients, setSelectedIngredients] = useContext(SelectedIngredientsContext)

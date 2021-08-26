@@ -4,7 +4,6 @@ import blackboard from "../assets/images/bgImages/blackboard-texture.png";
 import { Element } from 'react-scroll';
 import { FaGithub, FaFacebook, FaLinkedinIn, FaCode } from 'react-icons/fa'
 
-
 const Footer = () => {
   return (
     <Element name="footer">
@@ -34,7 +33,7 @@ const Footer = () => {
 
 const Container = styled.footer`
   width: 100%;
-  padding: 2rem;
+  padding: 3rem 2rem;
   background-image: url(${blackboard});
   background-size: cover;
   background-position: center center;    

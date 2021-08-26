@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <Container>
       <Nav>
-        <a href="/">
+        <a href="/findyourpizza">
           <Logo>
             <LogoText>
               <h2>Find Your</h2>
