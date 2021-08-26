@@ -34,7 +34,7 @@ const Footer = () => {
 
 const Container = styled.footer`
   width: 100%;
-  padding: 2rem;
+  padding: 3rem 2rem;
   background-image: url(${blackboard});
   background-size: cover;
   background-position: center center;    
