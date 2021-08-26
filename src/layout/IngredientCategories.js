@@ -1,3 +1,5 @@
+import { themes } from '../context/ThemeContext';
+import { Element } from "react-scroll";
 import styled from "styled-components";
 import bgWeb from "../assets/images/bgImages/bgWeb2.png";
 import bgMobile from "../assets/images/bgImages/bgMob.png";
@@ -5,12 +7,8 @@ import Sauces from "../components/ingredients/Sauces";
 import Cheeses from '../components/ingredients/Cheeses'
 import Meats from "../components/ingredients/Meats";
 import Other from "../components/ingredients/Other";
-import { themes } from '../context/ThemeContext';
-import { Element } from "react-scroll";
-
 
 const IngredientCategories = () => {
-
   return (
     <Element name="ingredients">
       <Container>
