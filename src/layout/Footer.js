@@ -4,7 +4,6 @@ import blackboard from "../assets/images/bgImages/blackboard-texture.png";
 import { Element } from 'react-scroll';
 import { FaGithub, FaFacebook, FaLinkedinIn, FaCode } from 'react-icons/fa'
 
-
 const Footer = () => {
   return (
     <Element name="footer">
