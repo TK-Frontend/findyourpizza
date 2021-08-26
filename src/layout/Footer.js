@@ -40,7 +40,7 @@ const Container = styled.footer`
   h6 {
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
-    color: #ffffff;
+    color: #fff;
     @media (max-width: 410px) {
  font-size: 0.5rem
   }
