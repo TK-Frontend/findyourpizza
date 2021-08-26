@@ -4,9 +4,11 @@ Demo: https://tk-frontend.github.io/findyourpizza/
 
 Technologies used:
 
+HTML: nav, header, section, footer etc.
+
 CSS: flexbox, grid, @fontface
 
-JavaScript: every, filter, includes, join, map, match, RegExp, ES6 (Arrows, Template Strings, Destructuring, Spread)
+JavaScript: every, filter, includes, join, map, RegExp, ES6 (Arrows, Template Strings, Destructuring, Spread)
 
 React: react-icons, react-router, react-scroll, useContext, useState, uuid
 
