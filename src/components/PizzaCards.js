@@ -1,35 +1,58 @@
-import React from "react";
 import styled from "styled-components";
 import blackboardPattern from "../assets/images/bgImages/blackboard.png";
-import Recipes from './Recipes'
-import { useContext } from "react";
-import { SelectedIngredientsContext } from "../contexts/SelectedIngredientsContext";
+import FilteredRecipes from "../utils/FilteredRecipes";
 
 const PizzaCards = () => {
-  const [selectedIngredients] = useContext(SelectedIngredientsContext)
-  const mappedSelected = selectedIngredients.map(item => item.name)
-
-  const isEveryItemOfArrayInAnotherArray = (array, searchElements) =>
-    searchElements.every((el) => {
-      return array.match(new RegExp(el, "i"));
-    })
-
-  const filteredRecipes = Recipes.filter(recipe => (isEveryItemOfArrayInAnotherArray(recipe.ingredients.join(', '), mappedSelected)))
+  const result = FilteredRecipes()
 
   return (
     <>
-      {filteredRecipes.map((recipe) => {
-        return (
-          <Card key={recipe.name}>
-            <img src={recipe.image} alt={recipe.name} className="imageOfPizza" />
-            <h1 className="name">{recipe.name}</h1>
-            <h2 className="igt">{recipe.ingredients.join(', ')}</h2>
-          </Card>
+      {
+        (<Container>
+          {result.filteredRecipes.map((recipe) => {
+            return (
+              <Card key={recipe.name}>
+                <img src={recipe.image} alt={recipe.name} className="imageOfPizza" />
+                <h1 className="name">{recipe.name}</h1>
+                <h2 className="igt">{recipe.ingredients.join(', ')}</h2>
+              </Card>
+            )
+          })
+          }
+        </Container>
         )
-      })}
+      }
     </>
   );
 };
+
+const Container = styled.div`
+  display: grid;
+  gap: 1rem 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin: 0 auto;
+  max-width: 88rem;
+  height: auto;
+
+  @media (max-width: 1410px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 0px;
+  }
+  @media (max-width: 960px) {
+    grid-template-columns: 1fr;
+    gap: 1rem 0px;
+  }  
+  @media (max-width: 496px) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+`
 
 const Card = styled.div`
   background-image: url(${blackboardPattern});
@@ -50,7 +73,7 @@ const Card = styled.div`
   "img img img img img img img img . igt igt igt igt igt igt igt igt igt igt igt igt ."
   "img img img img img img img img . igt igt igt igt igt igt igt igt igt igt igt igt ."
   "img img img img img img img img . igt igt igt igt igt igt igt igt igt igt igt igt ."
-  "img img img img img img img img . . . . . . . . . . . . . ."
+  "img img img img img img img img . igt igt igt igt igt igt igt igt igt igt igt igt ."
   "img img img img img img img img . . . . . . . . . . . . . ."
   "img img img img img img img img . . . . . . . . . . . . . ."
   "img img img img img img img img . . . . . . . . . . . . . .";
@@ -76,10 +99,9 @@ const Card = styled.div`
     border-bottom: 2px dashed white;
     font-family: "Archistico Bold";
     font-size: 1.7rem;
-
     @media (max-width: 496px) {
       font-size: 1rem; 
-  }
+  }  
     @media (max-width: 318px) {
       font-size: 0.78rem; 
   }
@@ -92,7 +114,6 @@ const Card = styled.div`
     font-size: 0.75rem;
     font-weight: 500;
     align-self: start;
-
     @media (max-width: 496px) {
       font-size: 0.48rem; 
   }
