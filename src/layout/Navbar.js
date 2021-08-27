@@ -52,6 +52,7 @@ const Container = styled.div`
   background-image: url(${blackboard});
   background-size: cover;
   background-position: center center;
+  padding: 1rem 0;
 `;
 
 const Nav = styled.nav`
