@@ -34,11 +34,11 @@ const Container = styled.div`
   background-size: 100%;
   padding: 2rem 0;
 
-  @media (min-width: 790px) {
+  @media (min-width: 821px) {
     background-position: center 30%;
     background-size: 100%;
       } 
-  @media (max-width: 790px) {
+  @media (max-width: 820px) {
   background-image: url(${bgMobile});   
       }
 `;
@@ -55,7 +55,7 @@ const Section = styled.section`
   color: ${themes.light.color};
   
 
-  @media (max-width: 790px) {
+  @media (max-width: 820px) {
     background-repeat: repeat-y;
   }
   @media (max-width: 410px) {
