@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/findyourpizza/static/css/main.b8336f89.chunk.css",
-    "main.js": "/findyourpizza/static/js/main.0e265692.chunk.js",
-    "main.js.map": "/findyourpizza/static/js/main.0e265692.chunk.js.map",
+    "main.js": "/findyourpizza/static/js/main.426d0431.chunk.js",
+    "main.js.map": "/findyourpizza/static/js/main.426d0431.chunk.js.map",
     "runtime-main.js": "/findyourpizza/static/js/runtime-main.7549c191.js",
     "runtime-main.js.map": "/findyourpizza/static/js/runtime-main.7549c191.js.map",
     "static/js/2.30a08401.chunk.js": "/findyourpizza/static/js/2.30a08401.chunk.js",
@@ -38,6 +38,6 @@
     "static/js/runtime-main.7549c191.js",
     "static/js/2.30a08401.chunk.js",
     "static/css/main.b8336f89.chunk.css",
-    "static/js/main.0e265692.chunk.js"
+    "static/js/main.426d0431.chunk.js"
   ]
 }
