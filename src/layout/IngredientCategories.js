@@ -64,7 +64,7 @@ const Section = styled.section`
   `;
 
 const Message = styled.div`
-color: #ffffff;
+color: #fff;
  text-align: center;
  padding-top: 2.5rem;
 `;
