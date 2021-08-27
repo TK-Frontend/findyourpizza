@@ -1,8 +1,8 @@
 import { themes } from '../context/ThemeContext';
 import { Element } from "react-scroll";
 import styled from "styled-components";
-import bgWeb from "../assets/images/bgImages/bgWeb2.png";
-import bgMobile from "../assets/images/bgImages/bgMob.png";
+import bgWeb from "../assets/images/bgImages/bg-web.jpg";
+import bgMobile from "../assets/images/bgImages/bg-mobile.jpg";
 import Sauces from "../components/ingredients/Sauces";
 import Cheeses from '../components/ingredients/Cheeses'
 import Meats from "../components/ingredients/Meats";
@@ -32,12 +32,13 @@ const Container = styled.div`
   background-image: url(${bgWeb});
   background-repeat: inherit;
   background-size: 100%;
+  padding: 2rem 0;
 
-  @media (min-width: 768px) {
+  @media (min-width: 790px) {
     background-position: center 30%;
     background-size: 100%;
       } 
-  @media (max-width: 768px) {
+  @media (max-width: 790px) {
   background-image: url(${bgMobile});   
       }
 `;
@@ -50,16 +51,15 @@ const Section = styled.section`
   align-items: flex-start;
   margin: 0 auto;
   max-width: 88rem;
-  padding-top: 1rem;
-  padding-bottom: 3rem;
+  padding: 1rem 0;
   color: ${themes.light.color};
   
 
-  @media (max-width: 768px) {
+  @media (max-width: 790px) {
     background-repeat: repeat-y;
   }
   @media (max-width: 410px) {
-    padding-bottom: 1rem; 
+    padding-bottom: 0; 
   }
   `;
 
