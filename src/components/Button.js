@@ -9,7 +9,7 @@ const Button = ({ listOfIngredients, setListOfIngredients, categoryName, categor
   const [selectedIngredients, setSelectedIngredients] = useContext(SelectedIngredientsContext)
 
   return (
-    <>
+    <Container>
       <h1>
         {categoryName} <img src={categoryImage} alt={categoryName} />
       </h1>
@@ -30,9 +30,17 @@ const Button = ({ listOfIngredients, setListOfIngredients, categoryName, categor
           );
         })}
       </Buttons>
-    </>
+    </Container>
   )
 }
+
+const Container = styled.div`
+padding: 1rem 0;
+h1 {
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+}
+`
 
 const Buttons = styled.div`
   display: flex;
