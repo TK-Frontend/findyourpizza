@@ -42,7 +42,7 @@ const Section = styled.div`
   flex-wrap: wrap;
   flex-basis: 80%;
   align-items: center;
-  padding: 1rem;
+  padding: 0.5rem;
 
   button {
     display: flex;
@@ -62,6 +62,9 @@ const Section = styled.div`
   
   @media (max-width: 768px) {
     flex-basis: auto;
+  }
+  @media (max-width: 410px) {
+    padding: 0; 
   }
 `;
 
