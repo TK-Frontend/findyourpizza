@@ -37,7 +37,7 @@ const Section = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 0.5rem;
 
   h1 {
     font-size: 1.2rem;
@@ -52,6 +52,9 @@ const Section = styled.div`
   
   @media (max-width: 768px) {
     flex-basis: auto;
+  }
+  @media (max-width: 410px) {
+    padding: 0; 
   }
 `;
 
