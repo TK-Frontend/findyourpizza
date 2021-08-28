@@ -41,6 +41,9 @@ const Container = styled.div`
   @media (max-width: 820px) {
   background-image: url(${bgMobile});   
       }
+  @media (max-width: 410px) {
+    padding: 0; 
+  }
 `;
 
 const Section = styled.section`
@@ -59,7 +62,7 @@ const Section = styled.section`
     background-repeat: repeat-y;
   }
   @media (max-width: 410px) {
-    padding-bottom: 0; 
+    padding-bottom: 1rem; 
   }
   `;
 
